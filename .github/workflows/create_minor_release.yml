@@ -22,7 +22,4 @@ jobs:
           token: ${{ env.GITHUB_TOKEN }}
 
       - name: Bump version
-        run: |
-          git config user.email github-actions@github.com
-          git config user.name github-actions
-          ./tools/create_release.sh minor
+        run: ./tools/create_release.sh minor
