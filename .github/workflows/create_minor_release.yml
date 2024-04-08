@@ -23,5 +23,6 @@ jobs:
 
       - name: Bump version
         run: |
-          chmod +x ./tools/create_release.sh
-          ./tools/create_release.sh minor
+          git config --global user.email khanhmenly123@gmail.com
+          git config --global user.name vkng1104
+          ./tools/create_release.sh major
