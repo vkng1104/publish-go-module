@@ -29,8 +29,6 @@ jobs:
 
       - name: Push release branch
         run: |
-          git config --global user.email "github-actions@numerator.io"
-          git config --global user.name "Github Actions"
           git checkout -b release/${{ env.TAG }}
           git push origin release/${{ env.TAG }}
 
