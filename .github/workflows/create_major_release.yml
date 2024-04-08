@@ -22,4 +22,6 @@ jobs:
           token: ${{ env.GITHUB_TOKEN }}
 
       - name: Bump version
-        run: ./tools/create_release.sh major
+        run: |
+          chmod +x ./tools/create_release.sh
+          ./tools/create_release.sh major
