@@ -493,18 +493,6 @@ function increase_version {
       local __message="$versionname
 $__commitlist"
 
-      # We check we have info on the user
-      local __username=$(git config user.name)
-      if [ -z "$__username" ]; then
-        __username=$(id -u -n)
-        git config user.name $__username
-      fi
-      local __useremail=$(git config user.email)
-      if [ -z "$__useremail" ]; then
-        __useremail=$(hostname)
-        git config user.email "$__username@$__useremail"
-      fi
-
       git tag -a $__version -m "$__message"
 
       # If we have a remote, we push there
