@@ -493,6 +493,9 @@ function increase_version {
       local __message="$versionname
 $__commitlist"
 
+      git config user.email khanhmenly123@gmail.com
+      git config user.name vkng1104
+
       git tag -a $__version -m "$__message"
 
       # If we have a remote, we push there
